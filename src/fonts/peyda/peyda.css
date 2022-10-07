@@ -1,0 +1,13 @@
+@font-face {
+    font-display: swap;
+    font-family: peyda;
+    font-weight: 500;
+    src: url("PeydaWeb-Regular.woff2");
+    src: url(PeydaWeb-Regular.woff2) format("woff2");
+  }
+  
+  .peyda {
+    font-family: peyda !important;
+    font-weight: 300;
+  }
+  

@@ -1,0 +1,12 @@
+@font-face {
+  font-display: swap;
+  font-family: pinar;
+  font-weight: 500;
+  src: url("Pinar-DS1-FD.woff2");
+  src: url(Pinar-DS1-FD.woff2) format("woff2");
+}
+
+.pinar {
+  font-family: pinar !important;
+  font-weight: 300;
+}
