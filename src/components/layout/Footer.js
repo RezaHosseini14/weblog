@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 
 function Footer() {
   return (
-    <footer style={{ marginTop: "auto" }}>
+    <footer>
       <Typography
         component="p"
         variant="p"

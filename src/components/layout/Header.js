@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Container, Avatar } from "@mui/material";
+import { Typography, Container, Avatar, Button } from "@mui/material";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const Header = ({ setDark, dark }) => {
     //     </Toolbar>
     //   </Container>
     // </AppBar>
-    <header style={{marginBottom:50}}>
+    <header style={{ marginBottom: 50 }}>
       <Container>
         <nav>
           <Typography component="h1" variant="h5" flex={1}>
@@ -33,7 +33,7 @@ const Header = ({ setDark, dark }) => {
             alignItems="center"
             gap={1}
           >
-            <div class="toggle-btn" id="_1st-toggle-btn">
+            <div className="toggle-btn" id="_1st-toggle-btn">
               <input
                 type="checkbox"
                 onChange={() => {
@@ -43,7 +43,12 @@ const Header = ({ setDark, dark }) => {
               <span></span>
             </div>
 
-            <Avatar />
+            {/* <Avatar /> */}
+            <Link to="/login">
+              <Button variant="outlined" size="small" sx={{ borderRadius: 3 }}>
+                ورود
+              </Button>
+            </Link>
           </Box>
         </nav>
       </Container>

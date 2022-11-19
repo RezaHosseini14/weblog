@@ -93,10 +93,20 @@ const GET_POST_COMMENTS = gql`
   }
 `;
 
+const GET_PROFILE = gql`
+  query getProfile {
+    authors {
+      username
+      password
+    }
+  }
+`;
+
 export {
   GET_BLOGS_INFO,
   GET_AUTHORS_INFO,
   GET_AUTHOR_INFO,
   GET_POSTS_INFO,
   GET_POST_COMMENTS,
+  GET_PROFILE,
 };

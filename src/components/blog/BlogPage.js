@@ -4,10 +4,10 @@ import { useQuery } from "@apollo/client";
 import { GET_POSTS_INFO } from "../../graphql/queries";
 import Loader from "../shared/Loader";
 import sanitizeHtml from "sanitize-html";
-import { Avatar, Box, Container, Grid, Typography } from "@mui/material";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+import { Avatar, Box, Button, Container, Grid, Typography } from "@mui/material";
 import CommentForm from "../comment/CommentForm";
 import Comments from "../comment/Comments";
+import { timeContent } from "../functions/timeContent";
 
 function BlogPage() {
   const { slug } = useParams();
@@ -59,20 +59,20 @@ function BlogPage() {
               viewBox="0 0 24 24"
               fill="none"
             >
-              <g clip-path="url(#clip0_7_6861)">
+              <g clipPath="url(#clip0_7_6861)">
                 <path
                   d="M21.21 12H3.75"
                   stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M10.18 20L3.41999 12.57C3.13999 12.26 3.13999 11.75 3.41999 11.44L10.18 4.01001"
                   stroke="black"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </g>
               <defs>
@@ -91,6 +91,7 @@ function BlogPage() {
             style={{ borderRadius: 15 }}
           />
         </Grid>
+
         <Grid item display="flex" alignItems="center">
           <Avatar
             src={data.post.author.avatar.url}
@@ -106,6 +107,7 @@ function BlogPage() {
             </Typography>
           </Box>
         </Grid>
+
         <Grid item xs={12} mt={5}>
           <div
             dangerouslySetInnerHTML={{
@@ -113,15 +115,22 @@ function BlogPage() {
             }}
           ></div>
         </Grid>
-        
-        <Grid xs={12}>
+
+        <Button
+          variant="contained"
+          size="small"
+          sx={{ width: "20%", borderRadius: 3 }}
+        >
+          {timeContent(data.post.content.html)}
+        </Button>
+
+        <Grid item xs={12}>
           <CommentForm slug={slug} />
         </Grid>
 
         <Grid item xs={12}>
           <Comments slug={slug} />
         </Grid>
-
       </Grid>
     </Container>
   );

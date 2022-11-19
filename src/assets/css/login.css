@@ -1,0 +1,11 @@
+.login-box {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+  box-shadow: rgb(0 0 0 / 10%) 0 0px 29px;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+    

@@ -12,8 +12,9 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { timeContent } from "../functions/timeContent";
 
-function CardEL({ title, slug, author, coverPhoto }) {
+function CardEL({ title, slug, author, coverPhoto,content }) {
   return (
     <Card
       className="sp_card"
@@ -64,6 +65,16 @@ function CardEL({ title, slug, author, coverPhoto }) {
           }
         />
       )}
+
+      {/* <Button
+        variant="contained"
+        size="small"
+        sx={{ width: "20%", borderRadius: 3 }}
+      >
+        {
+          timeContent(content)
+        }
+      </Button> */}
 
       <Divider variant="middle" sx={{ margin: "10px" }} />
       <CardActions>

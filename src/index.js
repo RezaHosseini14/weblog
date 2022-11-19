@@ -9,6 +9,8 @@ import "./fonts/peyda/peyda.css";
 import App from "./App";
 import { ThemeProvider } from "@mui/system";
 import theme from "./mui/theme";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_GRAPHCMS_URI,

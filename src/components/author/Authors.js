@@ -14,11 +14,6 @@ function Authors() {
     <div className="sp_authors">
       <Grid
         container
-        sx={{
-          boxShadow: "rgba(0,0,0,0.1) 0 4px 12px",
-          // borderRadius: 4,
-          // backgroundColor: "#fff",
-        }}
       >
         {authors.map((author, index) => (
           <React.Fragment key={author.id}>
@@ -27,6 +22,7 @@ function Authors() {
                 to={`/authors/${author.slug}`}
                 style={{
                   display: "flex",
+                  flexDirection:"column",
                   alignItems: "center",
                   textDecoration: "none",
                   gap: ".5rem",
